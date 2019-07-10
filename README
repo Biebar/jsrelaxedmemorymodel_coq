@@ -1,0 +1,18 @@
+This repository contains Coq files supplementing the paper Repairing the
+JavaScript Relaxed Memory Model.
+
+Requirements :
+    - Coq 8.8.1
+    - coq-hahn
+
+Build :
+    ./configure && make
+
+Description of the code
+    - Events.v : a definition of events (MixedEvent)
+    - Exec.v : a definition of an execution (MExec), of well formed
+      (well_formed), valid (consistent_sc_unfixed & consistent), data race free
+      (data_race_free), and sequentially consistent (seqcst) executions.
+    - RfFunc.v : a proof that rf⁻¹ is functional (rf_is_func).
+    - Scdrf.v : a proof of SC_DRF (sc_drf).
+    - Deadness.v : proofs of deadness_valid and deadness_sc.
